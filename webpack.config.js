@@ -1,11 +1,13 @@
 const webpack = require( 'webpack' );
-const {port}=require('./global.config');
+const {
+  port
+} = require( './global.config' );
 module.exports = {
   entry: './src/index.ts',
   output: {
     filename: 'bundle.js',
     path: __dirname + '/dist',
-    publicPath:process.env.HOT?`http://localhost:${port}/dist`:'./dist'
+    publicPath: process.env.HOT ? `http://localhost:${port}/dist` : './dist'
   },
   module: {
     rules: [ {
@@ -26,6 +28,9 @@ module.exports = {
 
     ]
 
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()

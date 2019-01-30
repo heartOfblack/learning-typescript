@@ -27,6 +27,7 @@
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
     "style-loader": "^0.23.1",
+    "typescript": "^3.2.4",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
@@ -40,8 +41,7 @@
       "@babel/preset-typescript"
     ],
     "plugins": [
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-transform-typescript"
+      "@babel/plugin-proposal-class-properties"
     ]
   }
 }
