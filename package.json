@@ -4,8 +4,8 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "dev": "cross-env HOT=1 webpack-dev-server  --colors --display-reasons --mode development --open",
-    "build": "webpack --mode production --colors --display-reasons"
+    "dev": "cross-env HOT=1 webpack-dev-server --config ./webpackConfig/webpack.config.js  --colors --display-reasons --mode development --open",
+    "build": "webpack --mode production --config ./webpackConfig/webpack.config.js --colors --display-reasons"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,8 @@
     "typescript": "^3.2.4",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5"

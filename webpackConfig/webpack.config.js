@@ -1,12 +1,12 @@
-const webpack = require( 'webpack' );
-const {
-  port
-} = require( './global.config' );
+// import {webpack} from 'webpack'
+const webpack =require('webpack');
+const path =require('path');
+const {port} =require('../global.config');
 module.exports = {
   entry: './src/index.ts',
   output: {
     filename: 'bundle.js',
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname,'../dist'),
     publicPath: process.env.HOT ? `http://localhost:${port}/dist` : './dist'
   },
   module: {
@@ -25,9 +25,7 @@ module.exports = {
           }
         ]
       }
-
     ]
-
   },
   resolve: {
     extensions: [ ".ts", ".tsx", ".js" ]

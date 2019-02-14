@@ -1,4 +1,5 @@
-import { ColorSupport } from "chalk";
+import {Color} from './enum'
+import { from } from "_array-flatten@2.1.2@array-flatten";
 
 class dataType{
 _numbuer:number=1;
@@ -6,13 +7,10 @@ _string:string=`string类型`;
 _boolean:boolean=true;
 _array:object[]=[{s:1}];
 _tuple:[number,string]=[1,''];//元祖，已知长度和类型的数组，在编辑器中如果字面量赋值不正确直接就会提示错误
-type;
 
 Assertion:any="asfasf";//断言判断
 
 constructor(){
-  enum Color {Red , Green, Blue};//枚举类型
-  this.type=Color;
 /* 断言 两种写法 */
   console.log((this.Assertion as string).length,'=========')
   console.log(<string>this.Assertion.length,'============')

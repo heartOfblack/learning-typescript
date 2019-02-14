@@ -19,16 +19,12 @@ class Interface{
   constructor(){
     let studentA:Student={name:'heartofblack',t:1,school:'中心小学'};//school属性一旦赋值之后不允许更改
     //只读属性赋值后不可更改
-    studentA.name="test"
+    studentA.name="test";
     console.log(Object.getOwnPropertyDescriptor(studentA,"school"));//writable ==true  所以，ts做的只是做检测，并不实质改变修饰器，下面一行注释的代码会有错误提示
     //但是仍然可以运行，切运行结果是正确的。
     // studentA.school="dd";
     console.log(studentA.school)
   }
-
-
-
-
 }
 
 
